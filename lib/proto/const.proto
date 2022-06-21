@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package sudoku;
+option go_package="management_users/lib/proto;pb_lib";
+
+enum Services {
+  unknown_service       = 0;
+
+  // Services
+  orchestrator          = 1;
+  backend               = 2;
+  storage               = 3;
+}
+
+enum Permission {
+  unknown_permission    = 0;
+
+  // Role
+  role_create           = 1;
+  role_read             = 2;
+  role_update           = 3;
+  role_delete           = 4;
+  role_list             = 5;
+
+  // User
+  user_create           = 6;
+  user_read             = 7;
+  user_update           = 8;
+  user_delete           = 9;
+  user_list             = 10;
+  user_blocked          = 11;
+  user_unblocked        = 12;
+  user_password_reset   = 13;
+}
+
+enum Unit {
+  unknown_unit          = 0;
+
+  pc                    = 1; // штук
+  g                     = 2; // грамм
+  ml                    = 3; // миллилитров
+}
